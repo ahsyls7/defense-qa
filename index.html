@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>深部煤岩破坏电位响应监测方法与动力灾害预警关键技术 — 答辩 Q&A</title>
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --primary: #1d4ed8;
+      --primary-light: #eff6ff;
+      --border: #e2e8f0;
+      --warn-bg: #fffbeb;
+      --warn-border: #fcd34d;
+      --warn-text: #92400e;
+      --success: #059669;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .header {
+      background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+      color: #fff;
+      padding: 28px 20px 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .header h1 {
+      margin: 0 0 6px;
+      font-size: 1.45rem;
+      font-weight: 700;
+    }
+    .header p {
+      margin: 0;
+      font-size: 0.92rem;
+      opacity: 0.9;
+    }
+    .toolbar {
+      max-width: 960px;
+      margin: 18px auto 0;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .search-box {
+      flex: 1 1 260px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      background: #fff;
+      outline: none;
+    }
+    .search-box:focus { border-color: var(--primary); }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    button {
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      font-size: 0.88rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    button:hover { background: #f8fafc; border-color: #cbd5e1; }
+    button.primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    button.primary:hover { background: #1e40af; }
+    .notice {
+      max-width: 960px;
+      margin: 14px auto 0;
+      padding: 0 16px;
+    }
+    .notice-box {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      color: var(--warn-text);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 16px auto 48px;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .qa-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .qa-header {
+      padding: 15px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      user-select: none;
+    }
+    .qa-header:hover { background: #f8fafc; }
+    .qa-title {
+      font-weight: 600;
+      font-size: 1.02rem;
+      color: var(--text);
+    }
+    .qa-num {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-right: 8px;
+    }
+    .qa-toggle {
+      color: var(--muted);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .qa-body {
+      display: none;
+      padding: 0 18px 18px;
+      border-top: 1px solid var(--border);
+    }
+    .qa-card.open .qa-body { display: block; }
+    .keywords-row {
+      margin: 12px 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+    .kw-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .kw-tag {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.8rem;
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+    .editable-area {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: #f8fafc;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+      outline: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .editable-area:focus {
+      background: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+    }
+    .card-footer {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .save-status {
+      color: var(--success);
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .save-status.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-inner">
+      <h1>深部煤岩破坏电位响应监测方法与动力灾害预警关键技术</h1>
+      <p>中国职业安全健康协会科技奖答辩 Q&A · 点击问题展开/收起，正文可直接点击编辑（自动保存，支持导出带走）</p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input type="text" id="searchInput" class="search-box" placeholder="搜索问题、关键词或回复内容..." />
+    <div class="btn-group">
+      <button id="toggleAllBtn">全部展开</button>
+      <button id="exportJsonBtn">导出备份 (JSON)</button>
+      <button id="importJsonBtn">导入备份</button>
+      <input type="file" id="importFile" accept=".json" style="display:none" />
+      <button id="resetBtn">恢复默认</button>
+    </div>
+  </div>
+
+  <div class="notice">
+    <div class="notice-box">
+      <strong>待填提醒：</strong> 第 5 题的钻屑量与瓦斯涌出初速度临界值（<code>[待填]</code>）、第 12 题的设备商业定价（<code>[待填] 万元</code>）请在下方直接点击修改。如需在其他电脑查看/编辑，可将本网页文件连同“导出备份”的 JSON 一起拷贝，或将本文件部署到 GitHub Pages / 静态托管。
+    </div>
+  </div>
+
+  <div class="container" id="qaContainer"></div>
+
+  <script>
+    const DEFAULT_QA = [
+      {
+        id: 1,
+        q: "相比其他技术手段，电位监测有什么优势 / 为什么要研究电位？",
+        keywords: ["时间精细", "空间定位", "前期基础"],
+        a: "（1）在时序监测上，电位监测对煤岩体的变形破坏响应灵敏，能够精细捕捉灾变前兆信息；\n（2）在空间定位上，电位能够实现连续介质的多点监测，在空间分布上实现靶向定位；\n（3）研究基础扎实：电位响应与煤岩体应力变化及损伤演化密切相关，课题组前期已具备较好的理论与实验基础。"
+      },
+      {
+        id: 2,
+        q: "电位监测是如何实现综合预警的？",
+        keywords: ["理论机制", "本构模型", "前兆识别"],
+        a: "（1）在实验研究和理论分析的基础上，揭示了煤岩破坏电荷产生机理、电场传播规律以及电位响应计算模型；\n（2）在力学模型上，构建了电位定量表征煤岩体应力和损伤演化的本构方程；\n（3）通过多重分形、临界慢化、尖点突变对电位时序响应数据进行分析，构建统计预警指标，根据不同指标的响应特征及响应程度进行分级预警。"
+      },
+      {
+        id: 3,
+        q: "电位监测是如何实现靶向判识的？",
+        keywords: ["大数据分析", "隶属度阈值", "常规指标验证"],
+        a: "（1）开展大量现场测试，对电位反演结果进行大样本数据统计；\n（2）利用模糊数学理论统计电位反演结果的隶属度并进行迭代，依据隶属度确定反演临界值；\n（3）结合常规指标校验结果对临界值进行验证与优化，兼顾“不遗漏危险点（较低临界值）”与“识别精度高、圈定范围小（较高临界值）”的双重需求。"
+      },
+      {
+        id: 4,
+        q: "现场电位监测是如何解决供电、数据传输、分析、预警与抗干扰的？",
+        keywords: ["本安供电", "无线/有线传输", "抗干扰滤波", "智能预警"],
+        a: "（1）供电与合规：电位监测仪器严格按矿用本安防爆要求设计，具备独立电池供电，也可接入井下分站供电；\n（2）数据传输：通过蓝牙无线传输或井下分站有线线缆，将井下数据实时传输至地面监测主机；\n（3）抗干扰与智能分析：软件端内置了针对井下杂散电流与机电设备干扰的自适应滤波及基线漂移去除算法，并对接收数据进行实时解算、自动成图，预设分级预警模型与阈值，出现异常时自动分级报警。"
+      },
+      {
+        id: 5,
+        q: "现场通过什么指标验证电位监测效果？",
+        keywords: ["传统经验", "常规指标", "危险验证"],
+        a: "（1）空间分布对比：在分析工作面前方走向及垂直煤壁倾向的电位分布时，将电位异常区（高值或变化剧烈区）与传统采动应力“三区”（原始应力区、应力集中区、卸压区）进行对比；\n（2）时序变化验证：以当地安监部门及生产企业定义的危险指标是否出现为依据。例如《煤矿安全规程》规定回采工作面风巷风流中甲烷浓度超过 1.0% 视为瓦斯超限，薛湖煤矿执行更严格的 0.85% 标准，本文即以 0.85% 作为瓦斯超限临界值；\n（3）反演空间验证：利用校验钻孔每米的钻屑量与瓦斯涌出初速度作为指标进行验证，两者的预警临界值分别为 [待填] 和 [待填]，达到临界值时发出预警信息，达到临界值的 85% 时发出预警提示。"
+      },
+      {
+        id: 6,
+        q: "回采工作面反演区域很大（160m×160m），如何用 10m 钻孔实现验证？",
+        keywords: ["前期预测", "分段追踪", "空间吻合"],
+        a: "（1）静态预测：在工作面推进初期或某一关键进尺节点，在前方煤壁布置移动式电极测试，通过反演成像一次性给出前方 160m×160m 区域潜在突出危险性的空间分布；\n（2）分段追踪校验：随着工作面推进，在待采煤壁上施工垂直煤壁、深 10m 的校验钻孔测试钻屑量与瓦斯涌出初速度；每推进间隔 10m 重复施工一次，连续进行 16 次“拼图式”追踪校验；\n（3）动态消纳与吻合验证：在综合叠加并等效消除采动推进带来的背景应力漂移后，将 16 次钻孔实测的相对高值异常区与前期反演预测的异常区进行空间叠加对比，两者在空间位置上高度吻合。"
+      },
+      {
+        id: 7,
+        q: "电位空间反演的黄色危险区和红色危险区是什么意思？",
+        keywords: ["隶属度分级", "不遗漏与高精度"],
+        a: "（1）为精细划分危险等级并保障判识成功率，基于模糊隶属度确立了双临界值组；\n（2）黄色危险区（不遗漏）：选取能 100% 识别潜在危险的较低临界值，确保圈出所有危险点，防止漏报；\n（3）红色危险区（高精度）：为避免盲目扩大治理范围，另设较高临界值，进一步缩小核心危险区范围、提高预警精度，便于矿方采取“分级预警、针对防治、综合治理”的精准措施。"
+      },
+      {
+        id: 8,
+        q: "时序前兆预警中，综合预警率 96% 是怎么确认的？",
+        keywords: ["多维指标", "交叉验证", "低漏报率"],
+        a: "（1）构建了临界慢化、多重分形、尖点突变 3 类预警指标（每类含 1~2 个参数），明确各参数的前兆异常阈值；\n（2）根据指标异常特征划分一、二、三级预警，并以现场常规危险指标是否实际发生作为真值标签；\n（3）采用逻辑回归（Stacking）对三个维度的预警结果进行融合训练，在独立测试集（交叉验证）上测得综合预警准确率达 96%；同时在阈值标定上优先保障极低的漏报率，确保关键灾变前兆不被遗漏。"
+      },
+      {
+        id: 9,
+        q: "空间危险判识中，精度高达 1m 是怎么定义的？",
+        keywords: ["网格分辨率", "加密实测", "物理信噪比"],
+        a: "（1）测点与模型分辨率：在重点异常区及煤壁浅部采用间距 ≤1m 的移动式植入电极测试，反演模型网格划分 ≤1m，且网格无关性验证表明小于 1m 时反演结果收敛稳定；\n（2）校验精度：沿校验钻孔轴向每 1m 测定一次钻屑量与瓦斯初速度，在重点加密区实现了 1m 步长的实测校验；\n（3）物理分辨率：多次重复性测试表明，1m 尺度内电位信号的信噪比满足测量误差要求，物理分辨率可靠。"
+      },
+      {
+        id: 10,
+        q: "电位监测的是什么区域？介质是煤还是岩？",
+        keywords: ["多位置", "多岩性", "PPT 案例"],
+        a: "（1）既可监测煤体表面（煤壁），也可监测煤层深部，适用于掘进与回采工作面；\n（2）通过施工钻孔，将柔性片状铜电极随 PVC 管送入孔内，利用气囊充气顶起电极片使其与孔壁充分压实耦合；\n（3）既可测试煤介质，也可测试顶板、底板及上覆岩层（如关键层、采空区覆岩等）；\n（4）PPT 中展示的案例为薛湖煤矿 25020 回采工作面煤层深处（距煤壁 20m）。"
+      },
+      {
+        id: 11,
+        q: "与传统微震、电磁辐射相比，电位监测有哪些优势？",
+        keywords: ["微震误差", "同源互补", "自身优势"],
+        a: "（1）对比微震：微震定位受介质非均质性影响大（采动裂隙、采空区、断层会导致弹性波折射、绕射和衰减），垂向定位误差相对较大；电位监测直接反映连续介质中的电势分布，空间靶向性更强；\n（2）对比电磁辐射：课题组长期深耕电磁辐射技术，电位研究正是脱胎于电磁辐射。电磁辐射通过天线非接触接收信号，而电位通过电极深入煤体内部直接采集电势。两者“同源异象”（均源于煤岩变形破裂诱发的电荷产生与运移），电位研究是对电磁辐射理论的重要补充与发展，两者结合能更全面地揭示动力灾害信息。"
+      },
+      {
+        id: 12,
+        q: "电位采集仪一台大概多少钱？现在有没有推广卖给其他单位？",
+        keywords: ["自主研发", "技术服务", "商业定价"],
+        a: "（1）电位采集仪从结构、硬件到软件均由课题组历经十余年自主研发，主要成本集中在前期研发，软硬件本身物料占比不高；\n（2）目前设备已完成中试熟化并在多个矿井成功应用，前期主要以技术服务/科研合作方式开展，未单独核算设备售价；\n（3）目前已规划将其作为独立商业设备推广，测算定价为 [待填] 万元。"
+      },
+      {
+        id: 13,
+        q: "国外研究电位的多吗？有哪些国家和科研团队？",
+        keywords: ["国际前沿", "国际合作", "国内团队"],
+        a: "（1）国外代表团队：法国国家科学研究中心 André Revil（震电效应与水力压裂监测）、以色列萨米·沙蒙工程学院 Frid（岩石破裂电磁辐射微观机理与定量反演）、日本东京大学地震研究所 Masao Nakatani（岩石剪切破裂与粘滑失稳电位演化）、NASA Ames 研究中心 / 圣何塞州立大学 Friedemann T. Freund（正空穴载流子 p-holes 理论）；\n（2）国际合作：本课题组与国际团队保持密切合作，项目牵头人李忠辉教授与 Frid 教授联合申报国家自然科学基金国际合作项目，项目骨干张昕博士曾赴 Revil 团队联合培养一年；\n（3）国内团队：潘一山院士团队（感应电荷）、中国科大郭自强（自电子反射）、中国地震局郝锦琦（电位反演）等也开展了相关研究。"
+      }
+    ];
+
+    const STORAGE_KEY = "agy_defense_qa_v1";
+    let qaData = loadData();
+    let allExpanded = false;
+
+    function loadData() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {}
+      return JSON.parse(JSON.stringify(DEFAULT_QA));
+    }
+
+    function saveData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(qaData));
+    }
+
+    function render(filter = "") {
+      const container = document.getElementById("qaContainer");
+      container.innerHTML = "";
+      const kw = filter.trim().toLowerCase();
+
+      qaData.forEach((item, idx) => {
+        const text = (item.q + " " + item.keywords.join(" ") + " " + item.a).toLowerCase();
+        if (kw && !text.includes(kw)) return;
+
+        const card = document.createElement("div");
+        card.className = "qa-card" + (allExpanded || kw ? " open" : "");
+
+        const header = document.createElement("div");
+        header.className = "qa-header";
+        header.innerHTML = `
+          <div class="qa-title"><span class="qa-num">Q${item.id}</span>${item.q}</div>
+          <div class="qa-toggle">${card.classList.contains("open") ? "收起 ▲" : "展开 ▼"}</div>
+        `;
+        header.addEventListener("click", () => {
+          card.classList.toggle("open");
+          header.querySelector(".qa-toggle").textContent = card.classList.contains("open") ? "收起 ▲" : "展开 ▼";
+        });
+
+        const body = document.createElement("div");
+        body.className = "qa-body";
+
+        const kwRow = document.createElement("div");
+        kwRow.className = "keywords-row";
+        kwRow.innerHTML = `<span class="kw-label">关键词：</span>` + item.keywords.map(k => `<span class="kw-tag">${k}</span>`).join("");
+
+        const editable = document.createElement("div");
+        editable.className = "editable-area";
+        editable.contentEditable = "true";
+        editable.textContent = item.a;
+
+        const footer = document.createElement("div");
+        footer.className = "card-footer";
+        footer.innerHTML = `<span>点击上方文字可直接编辑</span><span class="save-status">已自动保存 ✓</span>`;
+        const statusEl = footer.querySelector(".save-status");
+
+        editable.addEventListener("input", () => {
+          qaData[idx].a = editable.innerText;
+          saveData();
+          statusEl.classList.add("show");
+          clearTimeout(editable._t);
+          editable._t = setTimeout(() => statusEl.classList.remove("show"), 1500);
+        });
+
+        body.appendChild(kwRow);
+        body.appendChild(editable);
+        body.appendChild(footer);
+        card.appendChild(header);
+        card.appendChild(body);
+        container.appendChild(card);
+      });
+    }
+
+    document.getElementById("searchInput").addEventListener("input", (e) => render(e.target.value));
+
+    document.getElementById("toggleAllBtn").addEventListener("click", (e) => {
+      allExpanded = !allExpanded;
+      e.target.textContent = allExpanded ? "全部收起" : "全部展开";
+      render(document.getElementById("searchInput").value);
+    });
+
+    document.getElementById("exportJsonBtn").addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(qaData, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "答辩QA备份.json";
+      a.click();
+    });
+
+    document.getElementById("importJsonBtn").addEventListener("click", () => {
+      document.getElementById("importFile").click();
+    });
+
+    document.getElementById("importFile").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(reader.result);
+          if (Array.isArray(parsed)) {
+            qaData = parsed;
+            saveData();
+            render(document.getElementById("searchInput").value);
+            alert("导入成功！");
+          }
+        } catch (err) {
+          alert("JSON 格式无效");
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      if (confirm("确定要恢复为初始内容吗？当前修改将被覆盖。")) {
+        qaData = JSON.parse(JSON.stringify(DEFAULT_QA));
+        saveData();
+        render(document.getElementById("searchInput").value);
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
